@@ -1,5 +1,7 @@
 package com.Maktab;
 
+import java.util.Arrays;
+
 public class Customer {
     private int i = 0;
     private String username;
@@ -10,7 +12,7 @@ public class Customer {
     private String email;
     private Address address = new Address();
 
-    private Object[] cart = new Object[5];
+    private Object[] cart = new Object[1];
 
     public String getUsername() {
         return username;
@@ -68,9 +70,19 @@ public class Customer {
         this.address = address;
     }
 
+    public Object[] getCart() {
+        return cart;
+    }
+
     public void addItem(Object item) {
         cart[i++] = item;
+        resize();
     }
+
+    public void resize() {
+        cart = Arrays.copyOf(cart, cart.length + 1);
+    }
+
 }
 
 class Address {
@@ -110,5 +122,7 @@ class Address {
     public void setPostalCode(int postalCode) {
         this.postalCode = postalCode;
     }
+
+
 }
 

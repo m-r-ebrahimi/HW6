@@ -1,17 +1,17 @@
 package com.Maktab;
-
-
-
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
         Store store = new Store();
         Customer customer = new Customer();
         store.makeStore();
-
+        makeCustomer(customer);
+        boolean success=true;
+        while(success){
+            success=menu(customer,store);
+        }
     }
 
     public static void makeCustomer(Customer customer) {
@@ -37,7 +37,6 @@ public class Main {
         String street = scanner.nextLine();
         System.out.println("Enter postal code:");
         int code = scanner.nextInt();
-        scanner.nextInt();
         customer.setUsername(username);
         customer.setPassword(password);
         customer.setFirstName(firstname);
@@ -51,7 +50,8 @@ public class Main {
         customer.setAddress(address);
     }
 
-    public static void menu(Customer customer, Store store) {
+    public static boolean menu(Customer customer, Store store) {
         System.out.println(store);
+        return true;
     }
 }
