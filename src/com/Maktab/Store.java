@@ -62,13 +62,13 @@ public class Store {
 
     @Override
     public String toString() {
-        return "Store{" +"\n"+
-                "radios=" + Arrays.toString(radios) +"\n"+
-                ", televisions=" + Arrays.toString(televisions) +"\n"+
-                ", books=" + Arrays.toString(books) +"\n"+
-                ", magazines=" + Arrays.toString(magazines) +"\n"+
-                ", sportShoes=" + Arrays.toString(sportShoes) +"\n"+
-                ", oxfordShoes=" + Arrays.toString(oxfordShoes) +"\n"+
+        return "Store{" + "\n" +
+                "radios=" + Arrays.toString(radios) + "\n" +
+                "televisions=" + Arrays.toString(televisions) + "\n" +
+                "books=" + Arrays.toString(books) + "\n" +
+                "magazines=" + Arrays.toString(magazines) + "\n" +
+                "sportShoes=" + Arrays.toString(sportShoes) + "\n" +
+                "oxfordShoes=" + Arrays.toString(oxfordShoes) + "\n" +
                 '}';
     }
 }
