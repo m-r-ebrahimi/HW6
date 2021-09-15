@@ -1,13 +1,16 @@
 package com.Maktab;
 
 public class Customer {
+    private int i = 0;
     private String username;
     private String password;
     private String firstName;
     private String lastName;
     private String phoneNumber;
     private String email;
-    private Address address;
+    private Address address = new Address();
+
+    private Object[] cart = new Object[5];
 
     public String getUsername() {
         return username;
@@ -63,5 +66,9 @@ public class Customer {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public void addItem(Object item) {
+        cart[i++] = item;
     }
 }
