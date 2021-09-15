@@ -60,27 +60,30 @@ public class Main {
         if (select == 1) {
             System.out.println(store);
             add(customer);
-        }else if (select ==2){
+        } else if (select == 2) {
+            remove(customer);
+        } else if (select == 3) {
 
-        }else if (select == 3) {
-
-        }else{
-
+        } else {
+            System.out.println("invalid input");
         }
 
-        }
-        public static void add(Customer customer){
-            int[] item = new int[3];
-            System.out.println("Enter what kind you want:\n1)radio\n2)television\n3)book\n4)magazine\n5)sport shoes\n6)oxford shoes");
-            item[0] = scanner.nextInt();
-            System.out.println("Enert id:");
-            item[1] = scanner.nextInt();
-            System.out.println("Enter count:");
-            item[2] = scanner.nextInt();
-            customer.addItem(item);
-        }
-        public static void remove(Customer customer){
-            System.out.println(customer.printcart());
-
-        }
     }
+
+    public static void add(Customer customer) {
+        int[] item = new int[3];
+        System.out.println("Enter what kind you want:\n1)radio\n2)television\n3)book\n4)magazine\n5)sport shoes\n6)oxford shoes");
+        item[0] = scanner.nextInt();
+        System.out.println("Enert id:");
+        item[1] = scanner.nextInt();
+        System.out.println("Enter count:");
+        item[2] = scanner.nextInt();
+        customer.addItem(item);
+    }
+
+    public static void remove(Customer customer) {
+        System.out.println(customer.printcart());
+        System.out.println("enter what you want delete:");
+        customer.removeItem(scanner.nextInt() - 1);
+    }
+}
