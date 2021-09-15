@@ -63,7 +63,7 @@ public class Main {
         } else if (select == 2) {
             remove(customer);
         } else if (select == 3) {
-
+            buy(customer, store);
         } else {
             System.out.println("invalid input");
         }
@@ -82,8 +82,53 @@ public class Main {
     }
 
     public static void remove(Customer customer) {
-        System.out.println(customer.printcart());
+        System.out.println(customer.printCart());
         System.out.println("enter what you want delete:");
         customer.removeItem(scanner.nextInt() - 1);
+    }
+
+    public static void buy(Customer customer, Store store) {
+        int price = 0;
+        for (int i = 0; i < customer.getCart().length; i++) {
+            int[] item = (int[]) customer.getCart()[i];
+            if (item[0] == 1) {
+                for (int j = 0; j < store.getRadios().length; j++) {
+                    if (item[1] == store.getRadios()[j].getId()) {
+                        price += store.getRadios()[j].getPrice() * item[2];
+                    }
+                }
+            } else if (item[0] == 2) {
+                for (int j = 0; j < store.getTelevisions().length; j++) {
+                    if (item[1] == store.getTelevisions()[j].getId()) {
+                        price += store.getTelevisions()[j].getPrice() * item[2];
+                    }
+                }
+            } else if (item[0] == 3) {
+                for (int j = 0; j < store.getBooks().length; j++) {
+                    if (item[1] == store.getBooks()[j].getId()) {
+                        price += store.getBooks()[j].getPrice() * item[2];
+                    }
+                }
+            } else if (item[0] == 4) {
+                for (int j = 0; j < store.getMagazines().length; j++) {
+                    if (item[1] == store.getMagazines()[j].getId()) {
+                        price += store.getMagazines()[j].getPrice() * item[2];
+                    }
+                }
+            } else if (item[0] == 5) {
+                for (int j = 0; j < store.getSportShoes().length; j++) {
+                    if (item[1] == store.getSportShoes()[j].getId()) {
+                        price += store.getSportShoes()[j].getPrice() * item[2];
+                    }
+                }
+            } else {
+                for (int j = 0; j < store.getOxfordShoes().length; j++) {
+                    if (item[1] == store.getOxfordShoes()[j].getId()) {
+                        price += store.getOxfordShoes()[j].getPrice() * item[2];
+                    }
+                }
+            }
+        }
+        System.out.println(price);
     }
 }

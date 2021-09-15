@@ -94,7 +94,7 @@ public class Customer {
         cart = Arrays.copyOf(cart, cart.length - 1);
     }
 
-    public String printcart() {
+    public String printCart() {
         return Arrays.deepToString(cart);
     }
 
