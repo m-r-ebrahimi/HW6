@@ -2,8 +2,8 @@ package com.Maktab;
 
 public class OxfordShoe extends Shoes{
     private int id;
-    private static int count = 0;
-    private final int price=10000;
+    private  int count = 0;
+    private  int price;
 
     public int getId() {
         return id;
@@ -13,12 +13,16 @@ public class OxfordShoe extends Shoes{
         this.id = id;
     }
 
-    public static int getCount() {
+    public  int getCount() {
         return count;
     }
 
-    public static void setCount(int count) {
-        OxfordShoe.count = count;
+    public  void setCount(int count) {
+        this.count = count;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public int getPrice() {
