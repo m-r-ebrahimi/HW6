@@ -1,6 +1,6 @@
 package com.Maktab;
 
-public class Television extends ElectricalTools{
+public class Television{
     private int id;
     private int count;
     private int price;

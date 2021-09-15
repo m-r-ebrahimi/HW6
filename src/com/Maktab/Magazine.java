@@ -1,6 +1,6 @@
 package com.Maktab;
 
-public class Magazine extends Reading{
+public class Magazine {
     private int id;
     private int count;
     private int price;

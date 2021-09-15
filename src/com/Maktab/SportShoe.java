@@ -1,6 +1,6 @@
 package com.Maktab;
 
-public class SportShoe extends Shoes{
+public class SportShoe{
     private int id;
     private  int count;
     private  int price;

@@ -1,6 +1,6 @@
 package com.Maktab;
 
-public class Radio extends ElectricalTools{
+public class Radio{
     private int id;
     private int count;
     private int price;
