@@ -2,9 +2,8 @@ package com.Maktab;
 
 public class Magazine extends Reading{
     private int id;
-    private static int count = 0;
-    private final int price=10000;
-
+    private int count = 0;
+    private int price;
     public int getId() {
         return id;
     }
@@ -13,12 +12,16 @@ public class Magazine extends Reading{
         this.id = id;
     }
 
-    public static int getCount() {
+    public int getCount() {
         return count;
     }
 
-    public static void setCount(int count) {
-        Magazine.count = count;
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public int getPrice() {
