@@ -80,9 +80,7 @@ public class Customer {
     }
 
     public void removeItem(int index) {
-        for (int j = index; j < cart.length - 1; j++) {
-            cart[j] = cart[j + 1];
-        }
+        if (cart.length - 1 - index >= 0) System.arraycopy(cart, index + 1, cart, index, cart.length - 1 - index);
         smaller();
     }
 

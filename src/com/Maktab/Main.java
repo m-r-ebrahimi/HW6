@@ -10,11 +10,10 @@ public class Main {
         Customer customer = new Customer();
         store.makeStore();
         makeCustomer(customer);
-        boolean success = true;
-        while (success) {
-            menu(customer, store);
-        }
-        System.out.println(customer);
+        int select;
+        do {
+            select = menu(customer, store);
+        } while (select != 3);
     }
 
     public static void makeCustomer(Customer customer) {
@@ -53,7 +52,7 @@ public class Main {
         customer.setAddress(address);
     }
 
-    public static void menu(Customer customer, Store store) {
+    public static int menu(Customer customer, Store store) {
 
         System.out.println("1)add\n2)remove\n3)final");
         int select = scanner.nextInt();
@@ -67,7 +66,7 @@ public class Main {
         } else {
             System.out.println("invalid input");
         }
-
+        return select;
     }
 
     public static void add(Customer customer) {
