@@ -3,7 +3,7 @@ package com.Maktab;
 import java.util.Arrays;
 
 public class Customer {
-    private int i = 0;
+    static int i = 0;
     private String username;
     private String password;
     private String firstName;
@@ -12,7 +12,7 @@ public class Customer {
     private String email;
     private Address address = new Address();
 
-    private Object[] cart = new Object[1];
+    private Object[] cart = new Object[0];
 
     public String getUsername() {
         return username;
@@ -75,14 +75,27 @@ public class Customer {
     }
 
     public void addItem(Object item) {
-        cart[i++] = item;
         resize();
+        cart[i++] = item;
     }
 
     public void resize() {
         cart = Arrays.copyOf(cart, cart.length + 1);
     }
 
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", address=" + address +
+                ", cart=" + Arrays.deepToString(cart) +
+                '}';
+    }
 }
 
 class Address {
@@ -123,6 +136,14 @@ class Address {
         this.postalCode = postalCode;
     }
 
-
+    @Override
+    public String toString() {
+        return "Address{" +
+                "state='" + state + '\'' +
+                ", city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", postalCode=" + postalCode +
+                '}';
+    }
 }
 
