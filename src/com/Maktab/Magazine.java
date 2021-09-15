@@ -35,4 +35,12 @@ public class Magazine extends Reading{
         return price;
     }
 
+    @Override
+    public String toString() {
+        return "Magazine{" +
+                "id=" + id +
+                ", count=" + count +
+                ", price=" + price +
+                '}';
+    }
 }

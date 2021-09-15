@@ -35,4 +35,12 @@ public class SportShoe extends Shoes{
         return price;
     }
 
+    @Override
+    public String toString() {
+        return "SportShoe{" +
+                "id=" + id +
+                ", count=" + count +
+                ", price=" + price +
+                '}';
+    }
 }

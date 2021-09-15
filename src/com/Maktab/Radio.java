@@ -34,4 +34,13 @@ public class Radio extends ElectricalTools{
     public int getPrice() {
         return price;
     }
+
+    @Override
+    public String toString() {
+        return "Radio{" +
+                "id=" + id +
+                ", count=" + count +
+                ", price=" + price +
+                '}';
+    }
 }

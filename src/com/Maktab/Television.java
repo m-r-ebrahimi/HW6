@@ -35,4 +35,12 @@ public class Television extends ElectricalTools{
         return price;
     }
 
+    @Override
+    public String toString() {
+        return "Television{" +
+                "id=" + id +
+                ", count=" + count +
+                ", price=" + price +
+                '}';
+    }
 }

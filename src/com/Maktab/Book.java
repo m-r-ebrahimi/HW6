@@ -35,4 +35,12 @@ public class Book extends Reading{
         return price;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", count=" + count +
+                ", price=" + price +
+                '}';
+    }
 }
