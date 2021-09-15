@@ -36,6 +36,30 @@ public class Store {
 
     }
 
+    public Radio[] getRadios() {
+        return radios;
+    }
+
+    public Television[] getTelevisions() {
+        return televisions;
+    }
+
+    public Book[] getBooks() {
+        return books;
+    }
+
+    public Magazine[] getMagazines() {
+        return magazines;
+    }
+
+    public SportShoe[] getSportShoes() {
+        return sportShoes;
+    }
+
+    public OxfordShoe[] getOxfordShoes() {
+        return oxfordShoes;
+    }
+
     @Override
     public String toString() {
         return "Store{" +"\n"+

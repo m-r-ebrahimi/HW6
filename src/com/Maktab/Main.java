@@ -79,4 +79,8 @@ public class Main {
             item[2] = scanner.nextInt();
             customer.addItem(item);
         }
+        public static void remove(Customer customer){
+            System.out.println(customer.printcart());
+
+        }
     }

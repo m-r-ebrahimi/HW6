@@ -79,8 +79,23 @@ public class Customer {
         cart[i++] = item;
     }
 
+    public void removeItem(int index) {
+        for (int j = index; j < cart.length - 1; j++) {
+            cart[j] = cart[j + 1];
+        }
+        smaller();
+    }
+
     public void resize() {
         cart = Arrays.copyOf(cart, cart.length + 1);
+    }
+
+    public void smaller() {
+        cart = Arrays.copyOf(cart, cart.length - 1);
+    }
+
+    public String printcart() {
+        return Arrays.deepToString(cart);
     }
 
     @Override
