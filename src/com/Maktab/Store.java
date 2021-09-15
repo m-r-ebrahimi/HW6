@@ -8,5 +8,6 @@ public class Store {
     ArrayList<Book> books=new ArrayList();
     ArrayList<Magazine> magazines=new ArrayList();
     ArrayList<SportShoe> sportShoes=new ArrayList();
+    ArrayList<OxfordShoe> oxfordShoes=new ArrayList();
 
 }
