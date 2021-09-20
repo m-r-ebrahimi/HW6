@@ -20,6 +20,6 @@ public class Radio extends Product {
     public String toString() {
         return "Radio{" + super.toString() +
                 "power=" + power +
-                '}';
+                '}'+"\n";
     }
 }
