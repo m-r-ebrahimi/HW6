@@ -151,7 +151,8 @@ public class Process {
                 editStore(store, "Television", ((Television) product).getId(), ((Television) product).getCount());
             }
         }
-        System.out.println("your totall price is " + price);
+        System.out.println("your total price is " + price);
+        System.out.println("\n\n=============\nFinal  Store\n=============\n"+store);
     }
 
     private int findPrice(Store store, String productType, int id, int count) {
