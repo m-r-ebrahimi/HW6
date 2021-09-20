@@ -6,12 +6,12 @@ import com.Maktab.shop.product.*;
 import java.util.Arrays;
 
 public class Store {
-    private Radio[] radios = new Radio[5];
-    private Television[] televisions = new Television[6];
-    private Book[] books = new Book[5];
-    private Magazine[] magazines = new Magazine[7];
-    private SportShoe[] sportShoes = new SportShoe[4];
-    private OxfordShoe[] oxfordShoes = new OxfordShoe[4];
+    private Product[] radios = new Radio[5];
+    private Product[] televisions = new Television[6];
+    private Product[] books = new Book[5];
+    private Product[] magazines = new Magazine[7];
+    private Product[] sportShoes = new SportShoe[4];
+    private Product[] oxfordShoes = new OxfordShoe[4];
 
     public void makeStore() {
         radios[0] = new Radio(1, "RF-P50D", 1200, 34, 10);
@@ -54,27 +54,27 @@ public class Store {
 
     }
 
-    public Radio[] getRadios() {
+    public Product[] getRadios() {
         return radios;
     }
 
-    public Television[] getTelevisions() {
+    public Product[] getTelevisions() {
         return televisions;
     }
 
-    public Book[] getBooks() {
+    public Product[] getBooks() {
         return books;
     }
 
-    public Magazine[] getMagazines() {
+    public Product[] getMagazines() {
         return magazines;
     }
 
-    public SportShoe[] getSportShoes() {
+    public Product[] getSportShoes() {
         return sportShoes;
     }
 
-    public OxfordShoe[] getOxfordShoes() {
+    public Product[] getOxfordShoes() {
         return oxfordShoes;
     }
 
