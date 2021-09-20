@@ -94,8 +94,11 @@ public class Customer {
     }
 
     public void removeItem(int index) {
-        if (cart.length - 1 - index >= 0) System.arraycopy(cart, index + 1, cart, index, cart.length - 1 - index);
-        smaller();
+        if (cart.length - 1 - index >= 0)
+            if (cart.length - index >= 0)
+                if (cart.length - 1 - index >= 0)
+                    System.arraycopy(cart, index + 1, cart, index, cart.length - 1 - index);
+                smaller();
     }
 
     public void resize() {
@@ -104,6 +107,7 @@ public class Customer {
 
     public void smaller() {
         cart = Arrays.copyOf(cart, cart.length - 1);
+        i--;
     }
 
     public String printCart() {
