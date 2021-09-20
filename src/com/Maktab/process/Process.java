@@ -118,26 +118,28 @@ public class Process {
         customer.removeItem(scanner.nextInt() - 1);
     }
 
-    public void buy(Customer customer, Store store) {
-        price(customer, store);
-        //updateStore(customer, store);
-    }
 
-    public void price(Customer customer, Store store) {
+    public void buy(Customer customer, Store store) {
         int price = 0;
         for (Object product : customer.getCart()) {
             if (product instanceof Book) {
                 price += findPrice(store, "Book", ((Book) product).getId(), ((Book) product).getCount());
+                editStore(store, "Book", ((Book) product).getId(), ((Book) product).getCount());
             } else if (product instanceof Magazine) {
                 price += findPrice(store, "Magazine", ((Magazine) product).getId(), ((Magazine) product).getCount());
+                editStore(store, "Magazine", ((Magazine) product).getId(), ((Magazine) product).getCount());
             } else if (product instanceof OxfordShoe) {
                 price += findPrice(store, "OxfordShoe", ((OxfordShoe) product).getId(), ((OxfordShoe) product).getCount());
+                editStore(store, "OxfordShoe", ((OxfordShoe) product).getId(), ((OxfordShoe) product).getCount());
             } else if (product instanceof Radio) {
                 price += findPrice(store, "Radio", ((Radio) product).getId(), ((Radio) product).getCount());
+                editStore(store, "Radio", ((Radio) product).getId(), ((Radio) product).getCount());
             } else if (product instanceof SportShoe) {
                 price += findPrice(store, "SportShoe", ((SportShoe) product).getId(), ((SportShoe) product).getCount());
+                editStore(store, "SportShoe", ((SportShoe) product).getId(), ((SportShoe) product).getCount());
             } else {
                 price += findPrice(store, "Television", ((Television) product).getId(), ((Television) product).getCount());
+                editStore(store, "Television", ((Television) product).getId(), ((Television) product).getCount());
             }
         }
         System.out.println("your totall price is " + price);
@@ -186,50 +188,45 @@ public class Process {
         return price;
     }
 
-
-
-    /*public void updateStore(Customer customer, Store store) {
-        for (int i = 0; i < customer.getCart().length; i++) {
-            int[] item = (int[]) customer.getCart()[i];
-            if (item[0] == 1) {
-                for (int j = 0; j < store.getRadios().length; j++) {
-                    if (item[1] == store.getRadios()[j].getId()) {
-                        store.getRadios()[j].setCount(store.getRadios()[j].getCount() - item[2]);
-                    }
+    private void editStore(Store store, String productType, int id, int count) {
+        switch (productType) {
+            case "Book":
+                for (int i = 0; i < store.getBooks().length; i++) {
+                    if (store.getBooks()[i].getId() == id)
+                        store.getBooks()[i].remove(count);
                 }
-            } else if (item[0] == 2) {
-                for (int j = 0; j < store.getTelevisions().length; j++) {
-                    if (item[1] == store.getTelevisions()[j].getId()) {
-                        store.getTelevisions()[j].setCount(store.getTelevisions()[j].getCount() - item[2]);
-                    }
+                break;
+            case "Magazine":
+                for (int i = 0; i < store.getMagazines().length; i++) {
+                    if (store.getMagazines()[i].getId() == id)
+                        store.getMagazines()[i].remove(count);
                 }
-            } else if (item[0] == 3) {
-                for (int j = 0; j < store.getBooks().length; j++) {
-                    if (item[1] == store.getBooks()[j].getId()) {
-                        store.getBooks()[j].setCount(store.getBooks()[j].getCount() - item[2]);
-                    }
+                break;
+            case "OxfordShoe":
+                for (int i = 0; i < store.getOxfordShoes().length; i++) {
+                    if (store.getOxfordShoes()[i].getId() == id)
+                        store.getOxfordShoes()[i].remove(count);
                 }
-            } else if (item[0] == 4) {
-                for (int j = 0; j < store.getMagazines().length; j++) {
-                    if (item[1] == store.getMagazines()[j].getId()) {
-                        store.getMagazines()[j].setCount(store.getMagazines()[j].getCount() - item[2]);
-                    }
+                break;
+            case "Radio":
+                for (int i = 0; i < store.getRadios().length; i++) {
+                    if (store.getRadios()[i].getId() == id)
+                        store.getRadios()[i].remove(count);
                 }
-            } else if (item[0] == 5) {
-                for (int j = 0; j < store.getSportShoes().length; j++) {
-                    if (item[1] == store.getSportShoes()[j].getId()) {
-                        store.getSportShoes()[j].setCount(store.getSportShoes()[j].getCount() - item[2]);
-                    }
+                break;
+            case "SportShoe":
+                for (int i = 0; i < store.getSportShoes().length; i++) {
+                    if (store.getSportShoes()[i].getId() == id)
+                        store.getSportShoes()[i].remove(count);
                 }
-            } else {
-                for (int j = 0; j < store.getOxfordShoes().length; j++) {
-                    if (item[1] == store.getOxfordShoes()[j].getId()) {
-                        store.getOxfordShoes()[j].setCount(store.getOxfordShoes()[j].getCount() - item[2]);
-                    }
+                break;
+            case "Television":
+                for (int i = 0; i < store.getTelevisions().length; i++) {
+                    if (store.getTelevisions()[i].getId() == id)
+                        store.getTelevisions()[i].remove(count);
                 }
-            }
+                break;
         }
-        System.out.println(store);
     }
-*/
+
 }
