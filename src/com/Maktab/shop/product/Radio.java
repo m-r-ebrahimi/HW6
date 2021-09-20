@@ -3,6 +3,9 @@ package com.Maktab.shop.product;
 public class Radio extends Product {
     private int power;
 
+    public Radio() {
+    }
+
     public Radio(int id, String name, int price, int count, int power) {
         super(id, name, price, count);
         this.power = power;
@@ -20,6 +23,6 @@ public class Radio extends Product {
     public String toString() {
         return "Radio{" + super.toString() +
                 "power=" + power +
-                '}'+"\n";
+                '}' + "\n";
     }
 }
