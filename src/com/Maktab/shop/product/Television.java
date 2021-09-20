@@ -1,6 +1,10 @@
 package com.Maktab.shop.product;
 
-public class Television extends Product {    private int power;
+public class Television extends Product {
+    private int power;
+
+    public Television() {
+    }
 
     public Television(int id, String name, int price, int count, int power) {
         super(id, name, price, count);
@@ -19,5 +23,6 @@ public class Television extends Product {    private int power;
     public String toString() {
         return "Radio{" + super.toString() +
                 "power=" + power +
-                '}'+"\n";
-    }}
+                '}' + "\n";
+    }
+}
