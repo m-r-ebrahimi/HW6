@@ -19,6 +19,6 @@ public class SportShoe extends Product {
     public String toString() {
         return "SportShoe{" +super.toString() +
                 "manufacturer='" + manufacturer + '\'' +
-                '}';
+                '}'+"\n";
     }
 }
