@@ -1,5 +1,7 @@
 package com.Maktab;
 
+import com.Maktab.shop.store.Store;
+
 import java.util.Scanner;
 
 public class Main {
@@ -9,11 +11,7 @@ public class Main {
         Store store = new Store();
         Customer customer = new Customer();
         store.makeStore();
-        makeCustomer(customer);
-        int select;
-        do {
-            select = menu(customer, store);
-        } while (select != 3);
+        System.out.println(store);
     }
 
     public static void makeCustomer(Customer customer) {
