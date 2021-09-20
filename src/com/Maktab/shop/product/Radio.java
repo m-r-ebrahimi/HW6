@@ -1,4 +1,4 @@
-package com.Maktab.product;
+package com.Maktab.shop.product;
 
 public class Radio extends Product {
     private int power;
