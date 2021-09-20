@@ -8,11 +8,20 @@ import com.Maktab.shop.store.Store;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import static java.awt.SystemColor.menu;
+
 public class Process {
     Scanner scanner = new Scanner(System.in);
 
     public void run() {
-
+        Store store = new Store();
+        Customer customer = new Customer();
+        store.makeStore();
+        makeCustomer(customer);
+        int select;
+        do{
+            select = menu(customer,store);
+        }while(select!=4);
     }
 
     public void makeCustomer(Customer customer) {
@@ -49,7 +58,7 @@ public class Process {
     }
 
     public int menu(Customer customer, Store store) {
-        System.out.println("\n================\n1)add\n2)remove\n3)final\n================\n");
+        System.out.println("\n================\n1)add\n2)remove\n3)final\n4)EXIT\n================\n");
         int select = scanner.nextInt();
         scanner.nextLine();
         if (select == 1) {
