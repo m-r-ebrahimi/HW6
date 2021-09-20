@@ -1,5 +1,7 @@
 package com.Maktab.person;
 
+import com.Maktab.shop.product.Product;
+
 import java.util.Arrays;
 
 public class Customer {
@@ -11,7 +13,7 @@ public class Customer {
     private String phoneNumber;
     private String email;
     private Address address = new Address();
-    private Object[] cart = new Object[0];
+    private Product[] cart = new Product[0];
 
     public Customer() {
     }
@@ -82,11 +84,11 @@ public class Customer {
         this.address = address;
     }
 
-    public Object[] getCart() {
+    public Product[] getCart() {
         return cart;
     }
 
-    public void addItem(Object item) {
+    public void addItem(Product item) {
         resize();
         cart[i++] = item;
     }
