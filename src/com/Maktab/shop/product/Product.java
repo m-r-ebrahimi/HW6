@@ -48,11 +48,11 @@ public class Product {
         this.count = count;
     }
 
-    void add(int num) {
+    public void add(int num) {
         count += num;
     }
 
-    void remove(int num) {
+    public void remove(int num) {
         if (count - num >= 0)
             count -= num;
         else System.out.println("Error!!");
