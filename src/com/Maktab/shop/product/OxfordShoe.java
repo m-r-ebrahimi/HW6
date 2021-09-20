@@ -1,4 +1,4 @@
-package com.Maktab.product;
+package com.Maktab.shop.product;
 
 public class OxfordShoe extends Product {
     private String manufacturer;
