@@ -8,7 +8,7 @@ public class Radio extends Product {
     }
 
     @Override
-    void add(int num) {
+    public void add(int num) {
         count += num;
     }
 
