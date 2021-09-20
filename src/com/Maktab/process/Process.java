@@ -120,15 +120,75 @@ public class Process {
 
     public void buy(Customer customer, Store store) {
         price(customer, store);
-        updateStore(customer, store);
+        //updateStore(customer, store);
     }
 
     public void price(Customer customer, Store store) {
         int price = 0;
-        System.out.println(price);
+        for (Object product : customer.getCart()) {
+            if (product instanceof Book) {
+                price += findPrice(store, "Book", ((Book) product).getId(), ((Book) product).getCount());
+            } else if (product instanceof Magazine) {
+                price += findPrice(store, "Magazine", ((Magazine) product).getId(), ((Magazine) product).getCount());
+            } else if (product instanceof OxfordShoe) {
+                price += findPrice(store, "OxfordShoe", ((OxfordShoe) product).getId(), ((OxfordShoe) product).getCount());
+            } else if (product instanceof Radio) {
+                price += findPrice(store, "Radio", ((Radio) product).getId(), ((Radio) product).getCount());
+            } else if (product instanceof SportShoe) {
+                price += findPrice(store, "SportShoe", ((SportShoe) product).getId(), ((SportShoe) product).getCount());
+            } else {
+                price += findPrice(store, "Television", ((Television) product).getId(), ((Television) product).getCount());
+            }
+        }
+        System.out.println("your totall price is " + price);
     }
 
-    public void updateStore(Customer customer, Store store) {
+    private int findPrice(Store store, String productType, int id, int count) {
+        int price = 0;
+        switch (productType) {
+            case "Book":
+                for (int i = 0; i < store.getBooks().length; i++) {
+                    if (store.getBooks()[i].getId() == id)
+                        price = store.getBooks()[i].getPrice() * count;
+                }
+                break;
+            case "Magazine":
+                for (int i = 0; i < store.getMagazines().length; i++) {
+                    if (store.getMagazines()[i].getId() == id)
+                        price = store.getMagazines()[i].getPrice() * count;
+                }
+                break;
+            case "OxfordShoe":
+                for (int i = 0; i < store.getOxfordShoes().length; i++) {
+                    if (store.getOxfordShoes()[i].getId() == id)
+                        price = store.getOxfordShoes()[i].getPrice() * count;
+                }
+                break;
+            case "Radio":
+                for (int i = 0; i < store.getRadios().length; i++) {
+                    if (store.getRadios()[i].getId() == id)
+                        price = store.getRadios()[i].getPrice() * count;
+                }
+                break;
+            case "SportShoe":
+                for (int i = 0; i < store.getSportShoes().length; i++) {
+                    if (store.getSportShoes()[i].getId() == id)
+                        price = store.getSportShoes()[i].getPrice() * count;
+                }
+                break;
+            case "Television":
+                for (int i = 0; i < store.getTelevisions().length; i++) {
+                    if (store.getTelevisions()[i].getId() == id)
+                        price = store.getTelevisions()[i].getPrice() * count;
+                }
+                break;
+        }
+        return price;
+    }
+
+
+
+    /*public void updateStore(Customer customer, Store store) {
         for (int i = 0; i < customer.getCart().length; i++) {
             int[] item = (int[]) customer.getCart()[i];
             if (item[0] == 1) {
@@ -171,5 +231,5 @@ public class Process {
         }
         System.out.println(store);
     }
-
+*/
 }
