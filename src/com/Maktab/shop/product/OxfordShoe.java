@@ -19,6 +19,6 @@ public class OxfordShoe extends Product {
     public String toString() {
         return "OxfordShoe{" +super.toString() +
                 "manufacturer='" + manufacturer + '\'' +
-                '}';
+                '}'+"\n";
     }
 }
