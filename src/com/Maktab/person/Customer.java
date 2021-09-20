@@ -13,6 +13,18 @@ public class Customer {
     private Address address = new Address();
     private Object[] cart = new Object[0];
 
+    public Customer() {
+    }
+
+    public Customer(String username, String password, String firstName, String lastName, String phoneNumber, String email, Address address) {
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.address = address;
+    }
 
     public String getUsername() {
         return username;
