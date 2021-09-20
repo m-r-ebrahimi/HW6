@@ -19,5 +19,5 @@ public class Television extends Product {    private int power;
     public String toString() {
         return "Radio{" + super.toString() +
                 "power=" + power +
-                '}';
+                '}'+"\n";
     }}
