@@ -1,24 +1,25 @@
 package com.Maktab.product;
 
 public class Radio extends Product {
-    private static int count = 0;
+    private int power;
 
-    public Radio(int id, String name, int price) {
-        super(id, name, price);
+    public Radio(int id, String name, int price, int count, int power) {
+        super(id, name, price, count);
+        this.power = power;
     }
 
-    @Override
-    public void add(int num) {
-        count += num;
+    public int getPower() {
+        return power;
     }
 
-    @Override
-    void remove(int num) {
-        count -= num;
+    public void setPower(int power) {
+        this.power = power;
     }
 
     @Override
     public String toString() {
-        return "Radio{" + super.toString() + ", count=" + count + "}";
+        return "Radio{" + super.toString() +
+                "power=" + power +
+                '}';
     }
 }
