@@ -49,7 +49,6 @@ public class Process {
     }
 
     public int menu(Customer customer, Store store) {
-
         System.out.println("\n================\n1)add\n2)remove\n3)final\n================\n");
         int select = scanner.nextInt();
         scanner.nextLine();
@@ -120,8 +119,57 @@ public class Process {
     }
 
     public void buy(Customer customer, Store store) {
-        //price(customer, store);
-        //updateStore(customer, store);
+        price(customer, store);
+        updateStore(customer, store);
+    }
+
+    public void price(Customer customer, Store store) {
+        int price = 0;
+        System.out.println(price);
+    }
+
+    public void updateStore(Customer customer, Store store) {
+        for (int i = 0; i < customer.getCart().length; i++) {
+            int[] item = (int[]) customer.getCart()[i];
+            if (item[0] == 1) {
+                for (int j = 0; j < store.getRadios().length; j++) {
+                    if (item[1] == store.getRadios()[j].getId()) {
+                        store.getRadios()[j].setCount(store.getRadios()[j].getCount() - item[2]);
+                    }
+                }
+            } else if (item[0] == 2) {
+                for (int j = 0; j < store.getTelevisions().length; j++) {
+                    if (item[1] == store.getTelevisions()[j].getId()) {
+                        store.getTelevisions()[j].setCount(store.getTelevisions()[j].getCount() - item[2]);
+                    }
+                }
+            } else if (item[0] == 3) {
+                for (int j = 0; j < store.getBooks().length; j++) {
+                    if (item[1] == store.getBooks()[j].getId()) {
+                        store.getBooks()[j].setCount(store.getBooks()[j].getCount() - item[2]);
+                    }
+                }
+            } else if (item[0] == 4) {
+                for (int j = 0; j < store.getMagazines().length; j++) {
+                    if (item[1] == store.getMagazines()[j].getId()) {
+                        store.getMagazines()[j].setCount(store.getMagazines()[j].getCount() - item[2]);
+                    }
+                }
+            } else if (item[0] == 5) {
+                for (int j = 0; j < store.getSportShoes().length; j++) {
+                    if (item[1] == store.getSportShoes()[j].getId()) {
+                        store.getSportShoes()[j].setCount(store.getSportShoes()[j].getCount() - item[2]);
+                    }
+                }
+            } else {
+                for (int j = 0; j < store.getOxfordShoes().length; j++) {
+                    if (item[1] == store.getOxfordShoes()[j].getId()) {
+                        store.getOxfordShoes()[j].setCount(store.getOxfordShoes()[j].getCount() - item[2]);
+                    }
+                }
+            }
+        }
+        System.out.println(store);
     }
 
 }
