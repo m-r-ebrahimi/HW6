@@ -1,24 +1,23 @@
 package com.Maktab.product;
 
-public class Television extends Product {
-    private static int count = 0;
+public class Television extends Product {    private int power;
 
-    public Television(int id, String name, int price) {
-        super(id, name, price);
+    public Television(int id, String name, int price, int count, int power) {
+        super(id, name, price, count);
+        this.power = power;
     }
 
-    @Override
-    void add(int num) {
-        count += num;
+    public int getPower() {
+        return power;
     }
 
-    @Override
-    void remove(int num) {
-        count -= num;
+    public void setPower(int power) {
+        this.power = power;
     }
 
     @Override
     public String toString() {
-        return "Television{" + super.toString() + ", count=" + count + "}";
-    }
-}
+        return "Radio{" + super.toString() +
+                "power=" + power +
+                '}';
+    }}
