@@ -20,6 +20,6 @@ public class Magazine extends Product {
     public String toString() {
         return "Magazine{" + super.toString() +
                 "publisherName='" + publisherName + '\'' +
-                '}';
+                '}'+"\n";
     }
 }
