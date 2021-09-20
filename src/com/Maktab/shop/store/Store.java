@@ -3,6 +3,8 @@ package com.Maktab.shop.store;
 
 import com.Maktab.shop.product.*;
 
+import java.util.Arrays;
+
 public class Store {
     private Radio[] radios = new Radio[5];
     private Television[] televisions = new Television[6];
@@ -26,29 +28,29 @@ public class Store {
         televisions[5] = new Television(6, "GTV-50KU722S", 15000, 4, 30);
 
 
-        books[0] = new Book(1, "En Dictionary", 80,45,"Oxford");
-        books[1] = new Book(2, "En Dictionary", 45,45,"Long man");
-        books[2] = new Book(3, "Fa Dictionary ", 76,45,"Long man");
-        books[3] = new Book(4, "Math", 23,45,"Hor");
-        books[4] = new Book(5, "Power Engineering", 100,45,"Hor");
+        books[0] = new Book(1, "En Dictionary", 80, 45, "Oxford");
+        books[1] = new Book(2, "En Dictionary", 45, 45, "Long man");
+        books[2] = new Book(3, "Fa Dictionary ", 76, 45, "Long man");
+        books[3] = new Book(4, "Math", 23, 45, "Hor");
+        books[4] = new Book(5, "Power Engineering", 100, 45, "Hor");
 
-        magazines[0] = new Magazine(1, "Do you Know_1", 980,34,"Oxford");
-        magazines[1] = new Magazine(2, "Do you Know_2", 980,34,"Oxford");
-        magazines[2] = new Magazine(3, "Do you Know_3", 980,34,"Oxford");
-        magazines[3] = new Magazine(4, "Do you Know_4", 980,34,"Oxford");
-        magazines[4] = new Magazine(5, "Do you Know_5", 980,34,"Oxford");
-        magazines[5] = new Magazine(6, "Do you Know_6", 980,34,"Oxford");
-        magazines[6] = new Magazine(7, "Do you Know_7", 980,34,"Oxford");
+        magazines[0] = new Magazine(1, "Do you Know_1", 980, 34, "Oxford");
+        magazines[1] = new Magazine(2, "Do you Know_2", 980, 34, "Oxford");
+        magazines[2] = new Magazine(3, "Do you Know_3", 980, 34, "Oxford");
+        magazines[3] = new Magazine(4, "Do you Know_4", 980, 34, "Oxford");
+        magazines[4] = new Magazine(5, "Do you Know_5", 980, 34, "Oxford");
+        magazines[5] = new Magazine(6, "Do you Know_6", 980, 34, "Oxford");
+        magazines[6] = new Magazine(7, "Do you Know_7", 980, 34, "Oxford");
 
-        sportShoes[0] = new SportShoe(1, "MU110", 98000,100,"Tabriz");
-        sportShoes[1] = new SportShoe(2, "MU111", 98000,100,"Tabriz");
-        sportShoes[2] = new SportShoe(3, "MU112", 98000,100,"Tabriz");
-        sportShoes[3] = new SportShoe(4, "MU113", 98000,100,"Tabriz");
+        sportShoes[0] = new SportShoe(1, "MU110", 98000, 100, "Tabriz");
+        sportShoes[1] = new SportShoe(2, "MU111", 98000, 100, "Tabriz");
+        sportShoes[2] = new SportShoe(3, "MU112", 98000, 100, "Tabriz");
+        sportShoes[3] = new SportShoe(4, "MU113", 98000, 100, "Tabriz");
 
-        oxfordShoes[0] = new OxfordShoe(1, "A21X", 10000,80,"Tabriz");
-        oxfordShoes[1] = new OxfordShoe(2, "A22X", 10000,80,"Tabriz");
-        oxfordShoes[2] = new OxfordShoe(3, "A23X", 10000,80,"Tabriz");
-        oxfordShoes[3] = new OxfordShoe(4, "A24X", 10000,80,"Tabriz");
+        oxfordShoes[0] = new OxfordShoe(1, "A21X", 10000, 80, "Tabriz");
+        oxfordShoes[1] = new OxfordShoe(2, "A22X", 10000, 80, "Tabriz");
+        oxfordShoes[2] = new OxfordShoe(3, "A23X", 10000, 80, "Tabriz");
+        oxfordShoes[3] = new OxfordShoe(4, "A24X", 10000, 80, "Tabriz");
 
     }
 
@@ -76,4 +78,15 @@ public class Store {
         return oxfordShoes;
     }
 
+    @Override
+    public String toString() {
+        return "Store{" + "\n" +
+                "radios=" + Arrays.toString(radios) + "\n" +
+                ", televisions=" + Arrays.toString(televisions) + "\n" +
+                ", books=" + Arrays.toString(books) + "\n" +
+                ", magazines=" + Arrays.toString(magazines) + "\n" +
+                ", sportShoes=" + Arrays.toString(sportShoes) + "\n" +
+                ", oxfordShoes=" + Arrays.toString(oxfordShoes) + "\n" +
+                '}';
+    }
 }
