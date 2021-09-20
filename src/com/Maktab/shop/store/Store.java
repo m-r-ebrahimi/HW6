@@ -1,9 +1,7 @@
-package com.Maktab.shop;
+package com.Maktab.shop.store;
 
 
-import com.Maktab.product.*;
-
-import java.util.Arrays;
+import com.Maktab.shop.product.*;
 
 public class Store {
     private Radio[] radios = new Radio[5];
