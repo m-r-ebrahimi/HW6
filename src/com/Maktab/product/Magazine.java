@@ -1,24 +1,25 @@
 package com.Maktab.product;
 
 public class Magazine extends Product {
-    private static int count = 0;
+    private String publisherName;
 
-    public Magazine(int id, String name, int price) {
-        super(id, name, price);
+    public Magazine(int id, String name, int price, int count, String publisher) {
+        super(id, name, price, count);
+        publisherName = publisher;
     }
 
-    @Override
-    void add(int num) {
-        count += num;
+    public String getPublisherName() {
+        return publisherName;
     }
 
-    @Override
-    void remove(int num) {
-        count -= num;
+    public void setPublisherName(String publisherName) {
+        this.publisherName = publisherName;
     }
 
     @Override
     public String toString() {
-        return "Magazine{" + super.toString() + ", count=" + count + "}";
+        return "Magazine{" + super.toString() +
+                "publisherName='" + publisherName + '\'' +
+                '}';
     }
 }
