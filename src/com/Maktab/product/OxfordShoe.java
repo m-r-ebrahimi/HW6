@@ -1,24 +1,24 @@
 package com.Maktab.product;
 
 public class OxfordShoe extends Product {
-    private static int count = 0;
-
-    public OxfordShoe(int id, String name, int price) {
-        super(id, name, price);
+    private String manufacturer;
+    public OxfordShoe(int id, String name, int price, int count, String manufacturer) {
+        super(id, name, price, count);
+        this.manufacturer = manufacturer;
     }
 
-    @Override
-    void add(int num) {
-        count += num;
+    public String getManufacturer() {
+        return manufacturer;
     }
 
-    @Override
-    void remove(int num) {
-        count -= num;
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
     @Override
     public String toString() {
-        return "OxfordShoe{" + super.toString() + ", count=" + count + "}";
+        return "OxfordShoe{" +super.toString() +
+                "manufacturer='" + manufacturer + '\'' +
+                '}';
     }
 }
