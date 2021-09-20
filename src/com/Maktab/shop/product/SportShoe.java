@@ -22,7 +22,7 @@ public class SportShoe extends Product {
     @Override
     public String toString() {
         return "SportShoe{" + super.toString() +
-                "manufacturer='" + manufacturer + '\'' +
+                " manufacturer='" + manufacturer + '\'' +
                 '}' + "\n";
     }
 }

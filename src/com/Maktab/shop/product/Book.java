@@ -22,7 +22,7 @@ public class Book extends Product {
     @Override
     public String toString() {
         return "Book{" + super.toString() +
-                "publisherName='" + publisherName + '\'' +
+                " publisherName='" + publisherName + '\'' +
                 '}' + "\n";
     }
 }

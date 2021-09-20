@@ -22,7 +22,7 @@ public class Radio extends Product {
     @Override
     public String toString() {
         return "Radio{" + super.toString() +
-                "power=" + power +
+                " power=" + power +
                 '}' + "\n";
     }
 }

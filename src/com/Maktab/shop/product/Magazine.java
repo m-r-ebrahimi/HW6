@@ -22,7 +22,7 @@ public class Magazine extends Product {
     @Override
     public String toString() {
         return "Magazine{" + super.toString() +
-                "publisherName='" + publisherName + '\'' +
+                " publisherName='" + publisherName + '\'' +
                 '}' + "\n";
     }
 }
